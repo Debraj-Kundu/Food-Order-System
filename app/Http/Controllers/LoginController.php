@@ -26,22 +26,29 @@ class LoginController extends Controller
     }
 
     function orders(){
-        $fitems = DB::table('items')->select('name', 'cost')->get();
+        $fitems = DB::table('items')->select('id', 'name', 'cost', 'date')->get();
         $fitems = json_encode($fitems);
         $fitems = json_decode($fitems, true);
-        return view('orders', ['items'=>$fitems]);
+        $total = DB::table('items')->sum('cost');
+        $total = json_encode($total);
+        $total = json_decode($total);
+        return view('orders', ['items'=>[$fitems, $total]]);
     }
 
     function addItem1(Request $req ){        
-        DB::table('items')->insert(['name'=>'muffin', 'cost'=>80]);
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'muffin', 'cost'=>80, 'date'=>$today]);
         return view('home');
     }
-    function addItem2(Request $req ){        
-        DB::table('items')->insert(['name'=>'Biriyani', 'cost'=>280]);
+    function addItem2(Request $req ){   
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'Biriyani', 'cost'=>280, 'date'=>$today]);
         return view('home');
     }
-    function addItem3(Request $req ){        
-        DB::table('items')->insert(['name'=>'cake', 'cost'=>190]);
+    function addItem3(Request $req ){    
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'cake', 'cost'=>190, 'date'=>$today]);
         return view('home');
     }
+
 }

@@ -18,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/process_login', [LoginController::class, 'process_login']);
 Route::get('/home', [LoginController::class, 'home']);
+
 Route::post('/item1', [LoginController::class, 'addItem1']);
 Route::post('/item2', [LoginController::class, 'addItem2']);
 Route::post('/item3', [LoginController::class, 'addItem3']);
+
 Route::get('/orders', [LoginController::class, 'orders']);
+
+
 
 
