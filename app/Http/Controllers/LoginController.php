@@ -37,7 +37,7 @@ class LoginController extends Controller
 
     function addItem1(Request $req ){        
         $today = date("d/m/Y");
-        DB::table('items')->insert(['name'=>'muffin', 'cost'=>80, 'date'=>$today]);
+        DB::table('items')->insert(['name'=>'Muffin', 'cost'=>80, 'date'=>$today]);
         return view('home');
     }
     function addItem2(Request $req ){   
@@ -47,7 +47,22 @@ class LoginController extends Controller
     }
     function addItem3(Request $req ){    
         $today = date("d/m/Y");
-        DB::table('items')->insert(['name'=>'cake', 'cost'=>190, 'date'=>$today]);
+        DB::table('items')->insert(['name'=>'Cake', 'cost'=>190, 'date'=>$today]);
+        return view('home');
+    }
+    function addItem4(Request $req ){    
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'Dosa', 'cost'=>60, 'date'=>$today]);
+        return view('home');
+    }
+    function addItem5(Request $req ){    
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'Butter Chicken', 'cost'=>240, 'date'=>$today]);
+        return view('home');
+    }
+    function addItem6(Request $req ){    
+        $today = date("d/m/Y");
+        DB::table('items')->insert(['name'=>'Rasgulla', 'cost'=>120, 'date'=>$today]);
         return view('home');
     }
 

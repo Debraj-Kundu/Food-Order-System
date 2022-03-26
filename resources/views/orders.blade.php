@@ -7,7 +7,8 @@
     <title>Document</title>
     <style>
         body{
-            background-color: #D3B5E5;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.jackspiceradams.com%2Fwp-content%2Fuploads%2F2017%2F05%2FCafe-Soya-01.jpg&f=1&nofb=1");
+            background-size: 1600px 800px;
         }
         .item{
             background-color: white;
@@ -16,7 +17,7 @@
             margin-top: 20px;
             padding: -10px;
             width: 700px;
-            box-shadow: 10px 9px 10px 1px #C26DBC;
+            box-shadow: 6px 5px 10px 1px black;
             border-radius: 20px;
         }
         #itemDiv{
@@ -35,6 +36,7 @@
             justify-content: center;
             align-items: center;
             padding-top: 20px;
+            font-size: 48px;
         }
         
 .button-62 {

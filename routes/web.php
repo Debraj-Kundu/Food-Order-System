@@ -22,6 +22,10 @@ Route::get('/home', [LoginController::class, 'home']);
 Route::post('/item1', [LoginController::class, 'addItem1']);
 Route::post('/item2', [LoginController::class, 'addItem2']);
 Route::post('/item3', [LoginController::class, 'addItem3']);
+Route::post('/item4', [LoginController::class, 'addItem4']);
+Route::post('/item5', [LoginController::class, 'addItem5']);
+Route::post('/item6', [LoginController::class, 'addItem6']);
+
 
 Route::get('/orders', [LoginController::class, 'orders']);
 
